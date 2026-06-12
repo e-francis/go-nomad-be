@@ -20,6 +20,8 @@ const gemini = new GeminiService(
   config.geminiApiKey,
   config.geminiModel,
   config.geminiFallbackModel,
+  config.openaiApiKey,
+  config.openaiModel,
 );
 
 await app.register(cors, { origin: config.corsOrigin });

@@ -5,6 +5,7 @@ export interface Coords {
 
 export interface Stop {
   city: string;
+  airport: string;
   coords: [number, number];
   activity: string;
   conditions: string;
@@ -22,7 +23,9 @@ export interface Airline {
   route: string;
   hub: string;
   originCity: string;
+  originAirport?: string;
   originCoords?: [number, number];
+  destAirport?: string;
   destCoords?: [number, number];
   prices: AirlinePrices;
   stops?: Stop[];
@@ -31,6 +34,7 @@ export interface Airline {
 export interface Plan {
   header: string;
   arrivalHub: string;
+  arrivalAirport?: string;
   coords: Coords;
   visa: {
     status: string;
